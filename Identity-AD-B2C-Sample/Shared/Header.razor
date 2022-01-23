@@ -1,0 +1,32 @@
+﻿<nav class="navbar header-navbar p-0">
+    @*<img src="/images/logos/logo-anyweb-xxsmall.png" border="0" style="height: 90%; padding-left: 10px; padding-top: 4px;"/>*@
+    <button class="navbar-toggler bg-primary d-block" @onclick="OnToggleClick">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ms-3 fw-bold title pe-4">AnyWeb, AnyTime</div>
+</nav>
+
+@code {
+
+    [Parameter]
+    public bool ToggleOn { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> ToggleOnChanged { get; set; }
+
+    async Task OnToggleClick()
+    {
+        await Toggle();
+    }
+
+    async Task Toggle(bool? value = null)
+    {
+        var newValue = value ?? !ToggleOn;
+        if (ToggleOn != newValue)
+        {
+            ToggleOn = newValue;
+            await ToggleOnChanged.InvokeAsync(ToggleOn);
+        }
+    }
+
+}

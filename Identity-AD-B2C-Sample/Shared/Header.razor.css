@@ -1,0 +1,39 @@
+﻿.navbar.header-navbar {
+    background-color: inherit;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
+    flex-grow: 0;
+    flex-wrap: nowrap;
+    height: 3.5rem;
+    justify-content: flex-start;
+    min-height: 3.5rem;
+}
+
+.header-navbar .navbar-toggler {
+    align-self: stretch;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.header-navbar .navbar-toggler .navbar-toggler-icon {
+    background-color: transparent !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    height: 2rem;
+    width: 2rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 350px) {
+    .title {
+        font-size: inherit;
+    }
+}

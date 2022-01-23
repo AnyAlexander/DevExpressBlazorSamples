@@ -1,0 +1,26 @@
+﻿<AuthorizeView>
+    <Authorized>
+        @foreach (var c in context.User.Claims)
+        {
+            @c.Type
+            <text>:</text>
+            @c.Value
+            <br />
+        }
+        
+@*        @foreach (var i in context.User.Identities)
+        {
+            @i.Name<br />
+            @foreach (var c in i.Claims)
+            {
+                @c.Value
+                <br />
+            }
+        
+        }
+*@        <a href="MicrosoftIdentity/Account/SignOut">Log out</a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="MicrosoftIdentity/Account/SignIn">Log in</a>
+    </NotAuthorized>
+</AuthorizeView>

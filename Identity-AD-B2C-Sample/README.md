@@ -1,11 +1,3 @@
-# DevExpressBlazorSamples
----
-Just some .NET 6 Blazor examples from lessons learned.
-
-Pardon the mess.  Good things to follow!
-
----
-
 # BlazorB2cAuthSample
 ---
 I published this simple project to provide an example on how to achive Azure AD B2C identity integration with a Blazor Server app.  
